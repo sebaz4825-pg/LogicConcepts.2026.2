@@ -6,7 +6,8 @@ public class ConsoleExtension
     {
         Console.Write(message);
         var numberString = Console.ReadLine();
-        if (int.TryParse(numberString, out int numberInt))
+        var numberInt = 0;
+        if (int.TryParse(numberString, out numberInt))
         {
             return numberInt;
         }
