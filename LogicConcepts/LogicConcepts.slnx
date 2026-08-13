@@ -1,6 +1,10 @@
 <Solution>
-  <Folder Name="/shared/">
-    <Project Path="Shared/Shared.csproj" Id="33514241-4d29-4cda-9fa8-091af8da9830" />
+  <Folder Name="/02/">
+    <Project Path="TheGreathestNumber/TheGreathestNumber.csproj" Id="d47be150-087a-4734-82d9-2eb950ea65b0" />
   </Folder>
-  <Project Path="02/02.csproj" />
+  <Folder Name="/03/">
+    <Project Path="SortNumbers/SortNumbers.csproj" Id="4dfae50a-6bf6-41c2-b7c1-12b835100abd" />
+  </Folder>
+  <Folder Name="/04/" />
+  <Project Path="../Shared/Shared.csproj" Id="24a7e480-16fc-40e2-b3a0-77825eae263c" />
 </Solution>
