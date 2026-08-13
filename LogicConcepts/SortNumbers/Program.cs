@@ -7,7 +7,7 @@ do
     Console.WriteLine("Ingrese 3 número diferenes...");
     var a = ConsoleExtension.GetInt("Ingrese primer número: ");
     var b = ConsoleExtension.GetInt("Ingrese segundo número: ");
-    if ( a == b)
+    if (a == b)
     {
         Console.WriteLine("Deben ser diferente, vuelva a empezar...");
         continue;
@@ -62,9 +62,9 @@ do
 }
 
  do
-{
+ {
     answer = ConsoleExtension.GetValidOptions("¿Deseas continuar [S]i, [N]o?: ", options);
-} while (!options.Any(x => x.Equals(answer, StringComparison.CurrentCultureIgnoreCase)));
+ } while (!options.Any(x => x.Equals(answer, StringComparison.CurrentCultureIgnoreCase)));
 
 } while (answer!.Equals("s", StringComparison.CurrentCultureIgnoreCase)) ;
 Console.WriteLine("Gamer Over.");
