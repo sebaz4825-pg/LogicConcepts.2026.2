@@ -26,7 +26,7 @@ namespace Backend;
 
     public override decimal GetValueToPay()
     {
-        throw new NotImplementedException();
+        return Salary;
     }
 
     //Private methods

@@ -11,10 +11,10 @@ public class CommissionEmployee : Employee
    
     //Constructors
 
-    public CommissionEmployee(int id, string firsName, string lastName, Date bornDate, Date hireDate, bool isActive, float v, int v1) : base(id, firsName, lastName, bornDate, hireDate,isActive)
+    public CommissionEmployee(int id, string firsName, string lastName, Date bornDate, Date hireDate, bool isActive, float commissionPercentage, decimal sales) : base(id, firsName, lastName, bornDate, hireDate, isActive)
     {
         CommissionPercentage = _commissionPercentage;
-        Sales = _sales;
+        Sales = sales;
 
     }
 
@@ -25,9 +25,7 @@ public class CommissionEmployee : Employee
         set => _commissionPercentage = ValidateCommissionPercentage(value);
     }
 
-    
-
-    public decimal Sales
+        public decimal Sales
     {
         get => _sales;
         set => _sales = ValidateSales(value);
@@ -41,8 +39,9 @@ public class CommissionEmployee : Employee
             $"Salary........: {GetValueToPay(),20:c2}";
     }
     //Public methods
-    public override decimal GetValueToPay() => _sales * (decimal)_commissionPercentage;
-
+    public override decimal GetValueToPay() => Sales * (decimal)_commissionPercentage;
+     
+    
 
    //Private methods
     private float ValidateCommissionPercentage(float commissionPercentage)
