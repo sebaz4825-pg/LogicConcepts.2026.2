@@ -17,5 +17,8 @@
   <Folder Name="/07/">
     <Project Path="Discounts/Discounts.csproj" Id="5cf2d94e-21bb-42ed-a32d-c7283e94c54d" />
   </Folder>
+  <Folder Name="/08/">
+    <Project Path="RegistrationValue/RegistrationValue.csproj" Id="46fe5692-3b8a-4484-87c7-9f38cc2693d6" />
+  </Folder>
   <Project Path="../Shared/Shared.csproj" Id="24a7e480-16fc-40e2-b3a0-77825eae263c" />
 </Solution>

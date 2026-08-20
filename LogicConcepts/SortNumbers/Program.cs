@@ -59,7 +59,7 @@ do
             Console.WriteLine($"El mayor es {c}, el medio es {b}, el menor es {a}");
         }
     }
-}
+
 
  do
  {
