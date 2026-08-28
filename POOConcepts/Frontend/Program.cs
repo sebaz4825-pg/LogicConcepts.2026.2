@@ -13,8 +13,10 @@
             var employee1 = new SalaryEmployee(1010, "Marta", "Lopez", new Date(1976, 1, 13), new Date(2020, 11, 20), true, 2100000);
             var employee2 = new CommissionEmployee(2020, "Sandra", "Cardona", new Date(2000, 12, 3), new Date(2020, 11, 30), true, 0.03f, 800000000);
             var employee3 = new CommissionEmployee(3030, "Hector", "Pulido", new Date(2000, 12, 3), new Date(2020, 11, 30), true, 0.03f, 26000000);
+            var employee4 = HourLyEmployee(4040, "victor", "Maldonado", new Date(2000, 12, 3), new Date(2020, 11, 30), true, 0.03f, 26000000);
+            var employee5 = new HourLyEmployee(5050, "Dora", "Ruiz", new Date(2000, 12, 3), new Date(2020, 11, 30), true, 0.03f, 26000000);
 
-            var employees = new List<Employee> { employee1, employee2, employee3 };
+    var employees = new List<Employee> { employee1, employee2, employee3 };
             foreach (var employee in employees)
             {
                 Console.WriteLine(employee);
