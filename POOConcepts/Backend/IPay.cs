@@ -1,5 +1,6 @@
 ﻿namespace Backend;
 
-internal interface IPay
+public interface IPay
 {
+    public decimal GetValueToPay();
 }

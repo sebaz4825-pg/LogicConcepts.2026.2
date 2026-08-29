@@ -39,5 +39,12 @@
       <FileName>HourLyEmployee.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Backend.BaseCommissionEmployee">
+    <Position X="3.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAACAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAQAAAA=</HashCode>
+      <FileName>BaseCommissionEmployee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
