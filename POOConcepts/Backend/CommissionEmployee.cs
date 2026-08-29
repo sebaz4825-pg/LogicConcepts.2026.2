@@ -31,17 +31,15 @@ public class CommissionEmployee : Employee
         set => _sales = ValidateSales(value);
 
     }
-    public override string ToString()
-    {
-        return $"{Id}\t{FirstName} {LastName}\n\t" +
-            $"Born date.....: {BornDate,20}\n\t" +
-            $"Hire date.....: {HireDate,20}\n\t" +
-            $"Salary........: {GetValueToPay(),20:c2}";
-    }
+
     //Public methods
-    public override decimal GetValueToPay() => Sales * (decimal)_commissionPercentage;
-     
-    
+    public override decimal GetValueToPay() => _sales * (decimal)_commissionPercentage;
+
+    public override string ToString() => $"{base.ToString()}\n\t" +
+            $"Commission %...: {CommissionPercentage,20:P2}\n\t" +
+            $"Sales..........: {Sales,20:C2}\n\t" +
+            $"Salary.........: {GetValueToPay(),20:C2}";
+
 
    //Private methods
     private float ValidateCommissionPercentage(float commissionPercentage)

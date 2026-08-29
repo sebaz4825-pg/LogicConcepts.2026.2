@@ -24,6 +24,7 @@
       <Property Name="BornDate" />
       <Property Name="HireDate" />
     </ShowAsAssociation>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Backend.Date">
     <Position X="6.25" Y="2" Width="2" />

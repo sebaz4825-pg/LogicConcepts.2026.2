@@ -1,8 +1,6 @@
-﻿
+﻿    namespace Backend;
 
-namespace Backend;
-
-    internal class HourLyEmployee : Employee
+    public class HourLyEmployee : Employee
 
     {
         // Fields
@@ -28,14 +26,15 @@ namespace Backend;
 
         public float WorkingHours
         {
-            get => _workingHours;
-            set => _workingHours = ValidateWorkingHours(value);
+            get => WorkingHours;
+            set => WorkingHours = ValidateWorkingHours(value);
         }
-        // Public Methods
-        public override decimal GetValueToPay() => HourValue * (decimal)WorkingHours;
+    public float WorkingHours1 { get => _workingHours; set => _workingHours = value; }
 
 
-            public override string ToString() => $"{base.ToString()}\n\t" +
+    // Public Methods
+    public override decimal GetValueToPay() => HourValue * (decimal)WorkingHours; 
+     public override string ToString() => $"{base.ToString()}\n\t" +
             $"Working hours..: {WorkingHours,20:N2}\n\t" +
             $"Hour value.....: {HourValue,20:C2}\n\t" +
             $"Salary.........: {GetValueToPay(),20:C2}";

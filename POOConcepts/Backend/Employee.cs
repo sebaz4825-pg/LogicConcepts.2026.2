@@ -1,5 +1,5 @@
 ﻿namespace Backend;
-public abstract class Employee
+public abstract class Employee :IPay 
 {
     //Contructors
     protected Employee(int id,string firsName, string lastName, Date bornDate, Date hireDate,bool isActive)
@@ -22,13 +22,11 @@ public abstract class Employee
 
     // public Methods
     public abstract decimal GetValueToPay();
-    public override string ToString()
-    {
-        return $"{Id}\t{FirstName} {LastName}\n\t" +
+    public override string ToString() => $"{Id}\t{FirstName} {LastName}\n\t" +
             $"Born date.....:   {BornDate,20}\n\t" +
-            $"Hire date.....:   {HireDate,20}\n\t" +
-            $"Salary........:   {GetValueToPay(),20:c2}";
-     }
+            $"Hire date.....:   {HireDate,20}\n\t";
+           
+     
 
 
 }

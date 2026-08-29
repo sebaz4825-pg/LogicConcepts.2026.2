@@ -18,16 +18,12 @@ namespace Backend;
         get => _salary;
         set => _salary = ValidateSalary(value);
     }
-    public override string ToString()
-    {
-        return $"{base.ToString()}\n\tSalary.........:  {GetValueToPay(),20:c2}";
-    }
 
+    public override decimal GetValueToPay() => _salary;
 
-    public override decimal GetValueToPay()
-    {
-        return Salary;
-    }
+    public override string ToString() => $"{base.ToString()}\n\t" +
+            $"Salary.........: {GetValueToPay(),20:C2}";
+
 
     //Private methods
     private decimal ValidateSalary(decimal salary)
