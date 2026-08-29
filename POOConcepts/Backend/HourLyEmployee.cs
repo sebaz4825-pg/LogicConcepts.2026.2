@@ -1,57 +1,61 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
-namespace Backend
-{
+namespace Backend;
+
     internal class HourLyEmployee : Employee
 
     {
         // Fields
         private decimal _hourValue;
-        private float _woekingHours;
+        private float _workingHours;
 
         // Constructor
-        public HourLyEmployee(nt id, string firsName, string lastName, Date bornDate, Date hireDate, bool isActive, decimal salary)
+        public HourLyEmployee(int id, string firsName, string lastName, Date bornDate, Date hireDate, bool isActive, decimal hourValue, float workingHours)
         : base(id, firsName, lastName, bornDate, hireDate, isActive)
         {
 
-            _hourValue = _hourValue
+            HourValue = hourValue;
+            WorkingHours = workingHours;
 
         }
         // Properties
 
-        public float CommissionPercentage
+        public decimal HourValue
         {
             get => _hourValue;
-            set => _hourValue = ValidateCommissionPercentage(value);
+            set => _hourValue = ValidateHourValue(value);
         }
 
-        public decimal Sales
+        public float WorkingHours
         {
-            get => _sales;
-            set => _sales = ValidateSales(value);
-
+            get => _workingHours;
+            set => _workingHours = ValidateWorkingHours(value);
         }
         // Public Methods
+        public override decimal GetValueToPay() => HourValue * (decimal)WorkingHours;
 
 
-        public override decimal GetValueToPay()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override string ToString()
-        {
-            return $"{base.ToString}\n\t" +
-                $"Born date.....:   {BornDate,20}\n\t" +
-                $"Hire date.....:   {HireDate,20}\n\t" +
-                $"Salary........:   {GetValueToPay(),20:c2}";
-        // Private Methods
+            public override string ToString() => $"{base.ToString()}\n\t" +
+            $"Working hours..: {WorkingHours,20:N2}\n\t" +
+            $"Hour value.....: {HourValue,20:C2}\n\t" +
+            $"Salary.........: {GetValueToPay(),20:C2}";
 
         private decimal ValidateHourValue(decimal hourValue)
         {
-
+            if (hourValue < 10000)
+            {
+                throw new Exception($"The hour value: {hourValue:C2}, is less than the $10,000.00.");
+            }
+            return hourValue;
         }
+
+        private float ValidateWorkingHours(float workingHours)
+        {
+            if (workingHours < 0)
+            {
+                throw new Exception($"The working hours: {workingHours:N2}, is less than the zero.");
+            }
+            return workingHours;
+        }
+    
     }
-}
